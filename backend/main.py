@@ -22,6 +22,7 @@ app = FastAPI()
 origins = [
     "http://localhost:5174",
     "http://localhost:5173",
+    "https://bird-sound.vercel.app"
 ]
 
 app.add_middleware(
