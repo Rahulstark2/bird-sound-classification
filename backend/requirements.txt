@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pymongo
+python-dotenv
+pydub
+librosa
+numpy
+tensorflow
+pydantic
+gridfs
