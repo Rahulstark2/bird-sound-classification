@@ -14,6 +14,8 @@ const Result = () => {
     }
   }, [confidence, predictedClass, navigate]);
 
+
+  
   const birdMapping = {
     'aldfly': 'Alder Flycatcher ',
     'ameavo': 'American Avocet ',
@@ -37,7 +39,9 @@ const Result = () => {
     'bawwar': 'Black-and-white Warbler ',
   };
 
+  
   const realName = birdMapping[predictedClass] || 'Unknown Bird';
+
 
   const [feedback, setFeedback] = useState('');
 
@@ -49,18 +53,19 @@ const Result = () => {
       const imageUrl = `/assets/birds/${predictedClass}.${format}`; // Adjusted path
       const image = new Image();
       image.src = imageUrl;
-
+  
       image.onload = () => {
         imageElement.src = imageUrl;
         imageElement.alt = predictedClass;
         imageLoaded = true;
       };
-
+  
       if (imageLoaded) {
         break;
       }
     }
   }, [predictedClass]);
+  
 
   return (
     <div className="flex flex-col h-screen bg-gray p-4">
