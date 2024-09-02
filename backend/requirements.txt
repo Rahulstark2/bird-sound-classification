@@ -7,4 +7,3 @@ librosa
 numpy
 tensorflow
 pydantic
-gridfs
