@@ -50,21 +50,22 @@ const Result = () => {
     const imageFormats = ['jpg', 'jpeg', 'webp', 'avif'];
     let imageLoaded = false;
     for (let format of imageFormats) {
-      const imageUrl = `src/assets/birds/${predictedClass}.${format}`;
+      const imageUrl = `/assets/birds/${predictedClass}.${format}`; // Adjusted path
       const image = new Image();
       image.src = imageUrl;
-
+  
       image.onload = () => {
         imageElement.src = imageUrl;
         imageElement.alt = predictedClass;
         imageLoaded = true;
       };
-
+  
       if (imageLoaded) {
         break;
       }
     }
   }, [predictedClass]);
+  
 
   return (
     <div className="flex flex-col h-screen bg-gray p-4">
