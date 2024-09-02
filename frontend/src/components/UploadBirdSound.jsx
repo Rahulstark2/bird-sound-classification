@@ -37,7 +37,7 @@ const UploadBirdSound = ({ setIsAnalyzing }) => {
 
         setIsAnalyzing(true); 
 
-        fetch('http://127.0.0.1:8000/upload-audio', {
+        fetch('https://bird-sound-classification-jpcc.onrender.com/upload-audio', {
             method: 'POST',
             body: formData
         })

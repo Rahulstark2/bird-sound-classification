@@ -33,7 +33,7 @@ const UploadDataset = () => {
     for (let i = 0; i < files.length; i++) {
       formData.append('files', files[i]);
     }
-    fetch('http://127.0.0.1:8000/upload-dataset', {
+    fetch('https://bird-sound-classification-jpcc.onrender.com/upload-dataset', {
       method: 'POST',
       body: formData
     })

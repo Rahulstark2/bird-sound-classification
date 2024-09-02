@@ -30,7 +30,7 @@ const SubmitButton = ({ confidence, realName, feedback }) => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/submit-feedback', {
+      const response = await fetch('https://bird-sound-classification-jpcc.onrender.com/submit-feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
